@@ -1,0 +1,16 @@
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\bin\Debug\Siapotik.exe.config
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\bin\Debug\Siapotik.exe
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\bin\Debug\Siapotik.pdb
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.csprojResolveAssemblyReference.cache
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.Properties.Resources.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.csproj.GenerateResource.Cache
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.exe
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.pdb
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmUtama.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmObat.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmGolObat.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmJabatan.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmPegawai.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmPembelian.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmPenjualan.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmSupplier.resources
