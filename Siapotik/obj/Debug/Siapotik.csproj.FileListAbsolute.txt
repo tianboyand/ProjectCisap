@@ -14,3 +14,4 @@ E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.fr
 E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmPembelian.resources
 E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmPenjualan.resources
 E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmSupplier.resources
+E:\hery\KULIAH\Sem 5\Framework.NET\Tugas\Siapotik\Siapotik\obj\Debug\Siapotik.frmLogin.resources

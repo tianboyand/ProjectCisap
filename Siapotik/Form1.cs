@@ -15,12 +15,6 @@ namespace Siapotik
     {
         SqlConnection conn;
 
-        public void konek()
-        {
-            conn = new SqlConnection("Server = localhost; Data Source = TRIE; Database = siapotik;Integrated Security = SSPI");
-            conn.Open();
-        }
-
         public frmUtama()
         {
             InitializeComponent();
@@ -31,8 +25,6 @@ namespace Siapotik
             frmObat formobat = new frmObat();
             formobat.MdiParent = this;
             formobat.Show();
-            Panel1.Enabled = false;
-            Panel1.Hide();
         }
 
         private void menuExit_Click(object sender, EventArgs e)
@@ -45,7 +37,6 @@ namespace Siapotik
         
         string pesan;
         try {
-            konek();
             pesan = String.Concat("Koneksi ke = ",
             conn.DataSource, "\n");
                 pesan = String.Concat(pesan, "Database = ",
@@ -68,8 +59,6 @@ namespace Siapotik
             frmJabatan Jabatan = new frmJabatan();
             Jabatan.MdiParent = this;
             Jabatan.Show();
-            Panel1.Enabled = false;
-            Panel1.Hide();
         }
 
         private void dataPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,8 +66,50 @@ namespace Siapotik
             frmPegawai Pegawai = new frmPegawai();
             Pegawai.MdiParent = this;
             Pegawai.Show();
-            Panel1.Enabled = false;
-            Panel1.Hide();
         }
+
+        private void frmUtama_Load(object sender, EventArgs e)
+        {
+            classKoneksi konek = new classKoneksi();
+            konek.koneksi();
+            
+        }
+
+        private void pnPegawai_Click(object sender, EventArgs e)
+        {
+            frmPegawai pegawai = new frmPegawai();
+            pegawai.Show();
+            pegawai.MdiParent = this;
+            pnPegawai.Show();
+        }
+
+        private void pnJabatan_Click(object sender, EventArgs e)
+        {
+            frmJabatan jabatan = new frmJabatan();
+            jabatan.Show();
+            jabatan.MdiParent = this;
+            pnJabatan.Show();
+        }
+
+        private void pnGolongan_Click(object sender, EventArgs e)
+        {
+            frmGolObat golobat = new frmGolObat();
+            golobat.MdiParent = this;
+            golobat.Show();
+            pnGolongan.Show();
+            pnObat.Show();
+        }
+
+        private void pnObat_Click(object sender, EventArgs e)
+        {
+            frmObat obat = new frmObat();
+            obat.MdiParent = this;
+            obat.Show();
+            pnGolongan.SendToBack();
+            pnObat.SendToBack();
+            pnJabatan.SendToBack();
+            pnPegawai.SendToBack();
+        }
+
     }
 }

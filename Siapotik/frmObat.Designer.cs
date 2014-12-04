@@ -28,374 +28,392 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmObat));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.baru = new System.Windows.Forms.ToolStripButton();
-            this.simpan = new System.Windows.Forms.ToolStripButton();
-            this.batal = new System.Windows.Forms.ToolStripButton();
-            this.edit = new System.Windows.Forms.ToolStripButton();
-            this.hapus = new System.Windows.Forms.ToolStripButton();
-            this.keluar = new System.Windows.Forms.ToolStripButton();
-            this.selesai = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
+            this.lblAdd = new System.Windows.Forms.Label();
+            this.dgvObat = new System.Windows.Forms.DataGridView();
+            this.btnBatal = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.txtJumlah = new System.Windows.Forms.TextBox();
+            this.txtGolongan = new System.Windows.Forms.ComboBox();
+            this.txtNama = new System.Windows.Forms.TextBox();
+            this.kdObat = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtHargaJual = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kodeObat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaObat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.golonganObat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jlhStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hargaSatuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalHarga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kadaluarsa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.ToolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtKeterangan = new System.Windows.Forms.RichTextBox();
+            this.dateKadaluarsa = new System.Windows.Forms.DateTimePicker();
+            this.txtGolongan2 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvObat)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ToolStrip1
+            // label10
             // 
-            this.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.baru,
-            this.simpan,
-            this.batal,
-            this.edit,
-            this.hapus,
-            this.keluar,
-            this.selesai});
-            this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.ToolStrip1.Name = "ToolStrip1";
-            this.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.ToolStrip1.Size = new System.Drawing.Size(893, 71);
-            this.ToolStrip1.Stretch = true;
-            this.ToolStrip1.TabIndex = 25;
-            this.ToolStrip1.Text = "ToolStrip1";
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.SteelBlue;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(326, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 16);
+            this.label10.TabIndex = 87;
+            this.label10.Text = "Data Obat";
             // 
-            // baru
+            // btnClose
             // 
-            this.baru.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baru.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.baru.Image = ((System.Drawing.Image)(resources.GetObject("baru.Image")));
-            this.baru.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.baru.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.baru.Name = "baru";
-            this.baru.Size = new System.Drawing.Size(113, 68);
-            this.baru.Text = "Baru";
+            this.btnClose.BackColor = System.Drawing.Color.Crimson;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(786, -1);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 24);
+            this.btnClose.TabIndex = 85;
+            this.btnClose.Text = "X";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // simpan
+            // pictureBox1
             // 
-            this.simpan.Enabled = false;
-            this.simpan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.simpan.Image = ((System.Drawing.Image)(resources.GetObject("simpan.Image")));
-            this.simpan.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.simpan.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.simpan.Name = "simpan";
-            this.simpan.Size = new System.Drawing.Size(136, 68);
-            this.simpan.Text = "Simpan";
+            this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(817, 24);
+            this.pictureBox1.TabIndex = 84;
+            this.pictureBox1.TabStop = false;
             // 
-            // batal
+            // label9
             // 
-            this.batal.Enabled = false;
-            this.batal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.batal.Image = ((System.Drawing.Image)(resources.GetObject("batal.Image")));
-            this.batal.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.batal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.batal.Name = "batal";
-            this.batal.Size = new System.Drawing.Size(117, 68);
-            this.batal.Text = "Batal";
+            this.label9.Location = new System.Drawing.Point(2, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.TabIndex = 60;
             // 
-            // edit
+            // dlgOpen
             // 
-            this.edit.Enabled = false;
-            this.edit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.edit.Image = ((System.Drawing.Image)(resources.GetObject("edit.Image")));
-            this.edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.edit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(108, 68);
-            this.edit.Text = "Edit";
+            this.dlgOpen.FileName = "openFileDialog1";
             // 
-            // hapus
+            // lblAdd
             // 
-            this.hapus.Enabled = false;
-            this.hapus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hapus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hapus.Image = ((System.Drawing.Image)(resources.GetObject("hapus.Image")));
-            this.hapus.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.hapus.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.hapus.Name = "hapus";
-            this.hapus.Size = new System.Drawing.Size(126, 68);
-            this.hapus.Text = "Hapus";
+            this.lblAdd.AutoSize = true;
+            this.lblAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdd.ForeColor = System.Drawing.Color.Cyan;
+            this.lblAdd.Location = new System.Drawing.Point(367, 129);
+            this.lblAdd.Name = "lblAdd";
+            this.lblAdd.Size = new System.Drawing.Size(32, 13);
+            this.lblAdd.TabIndex = 77;
+            this.lblAdd.Text = "Add..";
             // 
-            // keluar
+            // dgvObat
             // 
-            this.keluar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.keluar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.keluar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.keluar.Image = ((System.Drawing.Image)(resources.GetObject("keluar.Image")));
-            this.keluar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.keluar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.keluar.Name = "keluar";
-            this.keluar.Size = new System.Drawing.Size(127, 68);
-            this.keluar.Text = "Keluar";
-            this.keluar.Click += new System.EventHandler(this.keluar_Click);
+            this.dgvObat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvObat.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvObat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvObat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvObat.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvObat.Location = new System.Drawing.Point(32, 239);
+            this.dgvObat.Name = "dgvObat";
+            this.dgvObat.Size = new System.Drawing.Size(750, 261);
+            this.dgvObat.TabIndex = 76;
+            this.dgvObat.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvObat_CellEnter);
             // 
-            // selesai
+            // btnBatal
             // 
-            this.selesai.Enabled = false;
-            this.selesai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selesai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.selesai.Image = ((System.Drawing.Image)(resources.GetObject("selesai.Image")));
-            this.selesai.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.selesai.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.selesai.Name = "selesai";
-            this.selesai.Size = new System.Drawing.Size(131, 68);
-            this.selesai.Text = "Selesai";
+            this.btnBatal.BackColor = System.Drawing.Color.Teal;
+            this.btnBatal.Enabled = false;
+            this.btnBatal.FlatAppearance.BorderSize = 0;
+            this.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBatal.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.ForeColor = System.Drawing.Color.White;
+            this.btnBatal.Location = new System.Drawing.Point(558, 19);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(71, 29);
+            this.btnBatal.TabIndex = 45;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.UseVisualStyleBackColor = false;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
-            // label1
+            // btnMin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 19);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Kode Obat";
+            this.btnMin.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.White;
+            this.btnMin.Location = new System.Drawing.Point(755, -1);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(28, 24);
+            this.btnMin.TabIndex = 86;
+            this.btnMin.Text = "-";
+            this.btnMin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMin.UseVisualStyleBackColor = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
-            // label2
+            // groupBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 19);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Nama Obat";
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnBatal);
+            this.groupBox1.Controls.Add(this.btnEdit);
+            this.groupBox1.Controls.Add(this.btnHapus);
+            this.groupBox1.Controls.Add(this.btnTambah);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(32, 517);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(750, 63);
+            this.groupBox1.TabIndex = 75;
+            this.groupBox1.TabStop = false;
             // 
-            // label3
+            // btnEdit
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Golongan";
+            this.btnEdit.BackColor = System.Drawing.Color.Teal;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(195, 19);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(71, 29);
+            this.btnEdit.TabIndex = 43;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // label4
+            // btnHapus
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 19);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Jumlah Stock";
+            this.btnHapus.BackColor = System.Drawing.Color.Teal;
+            this.btnHapus.FlatAppearance.BorderSize = 0;
+            this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHapus.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.ForeColor = System.Drawing.Color.White;
+            this.btnHapus.Location = new System.Drawing.Point(315, 19);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(71, 29);
+            this.btnHapus.TabIndex = 44;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            // 
+            // btnTambah
+            // 
+            this.btnTambah.BackColor = System.Drawing.Color.Teal;
+            this.btnTambah.FlatAppearance.BorderSize = 0;
+            this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTambah.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambah.ForeColor = System.Drawing.Color.White;
+            this.btnTambah.Location = new System.Drawing.Point(75, 19);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(71, 29);
+            this.btnTambah.TabIndex = 42;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            // 
+            // txtJumlah
+            // 
+            this.txtJumlah.Location = new System.Drawing.Point(168, 153);
+            this.txtJumlah.Name = "txtJumlah";
+            this.txtJumlah.Size = new System.Drawing.Size(192, 20);
+            this.txtJumlah.TabIndex = 70;
+            // 
+            // txtGolongan
+            // 
+            this.txtGolongan.FormattingEnabled = true;
+            this.txtGolongan.Location = new System.Drawing.Point(168, 126);
+            this.txtGolongan.Name = "txtGolongan";
+            this.txtGolongan.Size = new System.Drawing.Size(75, 21);
+            this.txtGolongan.TabIndex = 69;
+            this.txtGolongan.SelectedIndexChanged += new System.EventHandler(this.txtGolongan_SelectedIndexChanged);
+            // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(168, 100);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(192, 20);
+            this.txtNama.TabIndex = 68;
+            // 
+            // kdObat
+            // 
+            this.kdObat.Location = new System.Drawing.Point(168, 50);
+            this.kdObat.Name = "kdObat";
+            this.kdObat.Size = new System.Drawing.Size(192, 20);
+            this.kdObat.TabIndex = 67;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(497, 168);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Aqua;
+            this.label5.Location = new System.Drawing.Point(28, 178);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 19);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Harga Satuan";
+            this.label5.Size = new System.Drawing.Size(74, 17);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Kadaluarsa";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Aqua;
+            this.label4.Location = new System.Drawing.Point(28, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.TabIndex = 64;
+            this.label4.Text = "Jumlah";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Aqua;
+            this.label3.Location = new System.Drawing.Point(28, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "Golongan";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Aqua;
+            this.label2.Location = new System.Drawing.Point(28, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 17);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "Nama Obat";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Aqua;
+            this.label1.Location = new System.Drawing.Point(28, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Kode Obat";
+            // 
+            // txtHargaJual
+            // 
+            this.txtHargaJual.Location = new System.Drawing.Point(593, 101);
+            this.txtHargaJual.Name = "txtHargaJual";
+            this.txtHargaJual.Size = new System.Drawing.Size(192, 20);
+            this.txtHargaJual.TabIndex = 89;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(497, 200);
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label6.Location = new System.Drawing.Point(453, 100);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 19);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Total";
+            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.TabIndex = 88;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(497, 230);
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Aqua;
+            this.label7.Location = new System.Drawing.Point(453, 100);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 19);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Kadaluarsa";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(137, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(93, 20);
-            this.textBox1.TabIndex = 33;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(137, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(235, 20);
-            this.textBox2.TabIndex = 34;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 202);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 21);
-            this.comboBox1.TabIndex = 35;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(137, 232);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 20);
-            this.textBox3.TabIndex = 36;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(632, 169);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(235, 20);
-            this.textBox4.TabIndex = 37;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(632, 202);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(235, 20);
-            this.textBox5.TabIndex = 38;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(632, 231);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 20);
-            this.dateTimePicker1.TabIndex = 39;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kodeObat,
-            this.namaObat,
-            this.golonganObat,
-            this.jlhStock,
-            this.hargaSatuan,
-            this.totalHarga,
-            this.kadaluarsa});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 290);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(851, 238);
-            this.dataGridView1.TabIndex = 40;
-            // 
-            // kodeObat
-            // 
-            this.kodeObat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.kodeObat.HeaderText = "Kode Obat";
-            this.kodeObat.Name = "kodeObat";
-            this.kodeObat.Width = 83;
-            // 
-            // namaObat
-            // 
-            this.namaObat.HeaderText = "Nama Obat";
-            this.namaObat.Name = "namaObat";
-            this.namaObat.Width = 200;
-            // 
-            // golonganObat
-            // 
-            this.golonganObat.HeaderText = "Golongan";
-            this.golonganObat.Name = "golonganObat";
-            this.golonganObat.Width = 150;
-            // 
-            // jlhStock
-            // 
-            this.jlhStock.HeaderText = "Jumlah Stock";
-            this.jlhStock.Name = "jlhStock";
-            // 
-            // hargaSatuan
-            // 
-            this.hargaSatuan.HeaderText = "Harga Satuan";
-            this.hargaSatuan.Name = "hargaSatuan";
-            this.hargaSatuan.Width = 150;
-            // 
-            // totalHarga
-            // 
-            this.totalHarga.HeaderText = "Total";
-            this.totalHarga.Name = "totalHarga";
-            this.totalHarga.Width = 200;
-            // 
-            // kadaluarsa
-            // 
-            this.kadaluarsa.HeaderText = "Kadaluarsa";
-            this.kadaluarsa.Name = "kadaluarsa";
+            this.label7.Size = new System.Drawing.Size(72, 17);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "Harga Jual";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(292, 207);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Aqua;
+            this.label8.Location = new System.Drawing.Point(453, 127);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 13);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Add..";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label8.Size = new System.Drawing.Size(78, 17);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "Keterangan";
+            // 
+            // txtKeterangan
+            // 
+            this.txtKeterangan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKeterangan.Location = new System.Drawing.Point(593, 127);
+            this.txtKeterangan.Name = "txtKeterangan";
+            this.txtKeterangan.Size = new System.Drawing.Size(192, 73);
+            this.txtKeterangan.TabIndex = 92;
+            this.txtKeterangan.Text = "";
+            // 
+            // dateKadaluarsa
+            // 
+            this.dateKadaluarsa.Location = new System.Drawing.Point(168, 180);
+            this.dateKadaluarsa.Name = "dateKadaluarsa";
+            this.dateKadaluarsa.Size = new System.Drawing.Size(192, 20);
+            this.dateKadaluarsa.TabIndex = 93;
+            // 
+            // txtGolongan2
+            // 
+            this.txtGolongan2.Enabled = false;
+            this.txtGolongan2.Location = new System.Drawing.Point(249, 127);
+            this.txtGolongan2.Name = "txtGolongan2";
+            this.txtGolongan2.Size = new System.Drawing.Size(111, 20);
+            this.txtGolongan2.TabIndex = 94;
             // 
             // frmObat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 544);
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.ClientSize = new System.Drawing.Size(816, 594);
+            this.Controls.Add(this.txtGolongan2);
+            this.Controls.Add(this.dateKadaluarsa);
+            this.Controls.Add(this.txtKeterangan);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtHargaJual);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnMin);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblAdd);
+            this.Controls.Add(this.dgvObat);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtJumlah);
+            this.Controls.Add(this.txtGolongan);
+            this.Controls.Add(this.txtNama);
+            this.Controls.Add(this.kdObat);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ToolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmObat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Obat";
             this.Load += new System.EventHandler(this.frmObat_Load);
-            this.ToolStrip1.ResumeLayout(false);
-            this.ToolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvObat)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,36 +421,35 @@
 
         #endregion
 
-        internal System.Windows.Forms.ToolStrip ToolStrip1;
-        internal System.Windows.Forms.ToolStripButton baru;
-        internal System.Windows.Forms.ToolStripButton simpan;
-        internal System.Windows.Forms.ToolStripButton batal;
-        internal System.Windows.Forms.ToolStripButton edit;
-        internal System.Windows.Forms.ToolStripButton hapus;
-        internal System.Windows.Forms.ToolStripButton keluar;
-        internal System.Windows.Forms.ToolStripButton selesai;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.OpenFileDialog dlgOpen;
+        private System.Windows.Forms.Label lblAdd;
+        private System.Windows.Forms.DataGridView dgvObat;
+        private System.Windows.Forms.Button btnBatal;
+        private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.TextBox txtJumlah;
+        private System.Windows.Forms.ComboBox txtGolongan;
+        private System.Windows.Forms.TextBox txtNama;
+        private System.Windows.Forms.TextBox kdObat;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtHargaJual;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kodeObat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namaObat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn golonganObat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jlhStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hargaSatuan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalHarga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kadaluarsa;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox txtKeterangan;
+        private System.Windows.Forms.DateTimePicker dateKadaluarsa;
+        private System.Windows.Forms.TextBox txtGolongan2;
+
     }
 }
