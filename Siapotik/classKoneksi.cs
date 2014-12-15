@@ -10,10 +10,15 @@ namespace Siapotik
     class classKoneksi
     {
         SqlConnection conn;
-        public void koneksi()
+        public void openKoneksi()
         {
             conn = new SqlConnection("Server=localhost; Data Source=TRIE; Database=siapotik; Integrated Security=SSPI");
             conn.Open();
+        }
+
+        public void closeKoneksi()
+        {
+            conn.Close();
         }
     }
 }

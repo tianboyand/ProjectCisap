@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Siapotik
 {
@@ -19,58 +20,22 @@ namespace Siapotik
             InitializeComponent();
         }
 
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            conn = new SqlConnection("Server=localhost; Data Source=TRIE; Database=siapotik; Integrated Security=SSPI");
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //conn.Open();
-            //string sql = "Select Akses from T_Pegawai where Nama_Pegawai ='"+txtNama.Text+"' AND Password='"+txtPassword.Text+"'";
-            //SqlCommand cmd = new SqlCommand(sql, conn);
-            //SqlDataReader reader = cmd.ExecuteReader();
-            //while(reader.Read())
-            //{
-            //    if ((reader.GetString(0).ToString() == "Full"))
-            //    {
-            //        kunci();
-            //        MessageBox.Show("Sukses login "+txtNama.Text);
-            //        //this.Hide();
-            //        frmUtama utama = new frmUtama();
-            //        utama.Show();
-            //    }
-            //    else if ((reader.GetString(0).ToString() == "Half"))
-            //    {
-            //        kunci();
-            //        MessageBox.Show("Sukses login "+txtNama.Text);
-            //        //this.Hide();
-            //        frmPegawai pegawai = new frmPegawai();
-            //        pegawai.Show();
-            //    }
-            //    else if ((reader.GetString(0).ToString() == "Low "))
-            //    {
-            //        kunci();
-            //        MessageBox.Show("Sukses login " + txtNama.Text);
-            //        //this.Hide();
-            //        frmObat obat = new frmObat();
-            //        obat.Show();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Data Login Anda Tidak Dikenal!");
-            //        kunci();
-            //    }
-            //}
-            //reader.Close();
-            //conn.Close();
-
-
             conn.Open();
             string sql = "Select Nama_Pegawai,Password from T_Pegawai where Nama_Pegawai ='" + txtNama.Text + "' AND Password='" + txtPassword.Text + "'";
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                if ((reader.GetString(0) != txtNama.Text || reader.GetString(1) != txtPassword.Text))
+            reader.Read();
+                if (!reader.HasRows)
                 {
+                    MessageBox.Show("Nama atau Password Anda Salah / Tidak Terdaftar","WARNING",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     kunci();
-                    MessageBox.Show("Gagal login");
                 }
                 else
                 {
@@ -78,51 +43,41 @@ namespace Siapotik
                     sql = "Select Akses from T_Pegawai where Nama_Pegawai ='" + txtNama.Text + "' AND Password='" + txtPassword.Text + "'";
                     cmd = new SqlCommand(sql, conn);
                     reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
+                    reader.Read();
                         if ((reader.GetString(0).ToString() == "Full"))
                         {
-                            kunci();
-                            MessageBox.Show("Sukses login " + txtNama.Text);
-                            //this.Hide();
+                            MessageBox.Show("Selamat Datang " + txtNama.Text);
                             frmUtama utama = new frmUtama();
                             utama.Show();
+                            
                         }
                         else if ((reader.GetString(0).ToString() == "Half"))
                         {
-                            kunci();
-                            MessageBox.Show("Sukses login " + txtNama.Text);
-                            //this.Hide();
-                            frmPegawai pegawai = new frmPegawai();
-                            pegawai.Show();
+                            MessageBox.Show("Selamat Datang " + txtNama.Text);
+                            frmUtama utama = new frmUtama();
+                            utama.Show();
+                            utama.disPegawai();
                         }
                         else if ((reader.GetString(0).ToString() == "Low"))
                         {
-                            kunci();
-                            MessageBox.Show("Sukses login " + txtNama.Text);
-                            //this.Hide();
-                            frmObat obat = new frmObat();
-                            obat.Show();
+                            MessageBox.Show("Selamat Datang " + txtNama.Text);
+                            frmUtama utama = new frmUtama();
+                            utama.Show();
+                            utama.disData();
+                            utama.disDistribusi();
+                            utama.disPegawai();
+                            utama.disPenjualan();
                         }
                         else
                         {
                             MessageBox.Show("Data Login Anda Tidak Dikenal!");
                             kunci();
                         }
-                    }
+                        kunci();
+                        this.Hide();
                 }
-            }
             reader.Close();
             conn.Close();
-
-
-
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            conn = new SqlConnection("Server=localhost; Data Source=TRIE; Database=siapotik; Integrated Security=SSPI");
-           // conn.Open();
         }
 
         private void kunci()
@@ -136,5 +91,24 @@ namespace Siapotik
         {
             this.Close();
         }
+
+        public string FirstLetterToUpper(string str)
+        {
+            if (str == null)
+                return null;
+
+            if (str.Length > 1)
+                return char.ToUpper(str[0]) + str.Substring(1);
+
+            return str.ToUpper();
+        }
+
+        private void txtNama_TextChanged(object sender, EventArgs e)
+        {
+            //string t = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNama.Text);
+            ////e.KeyChar = Char.ToUpper(e.KeyChar);
+            //txtNama.Text = t;
+        }
+
     }
 }

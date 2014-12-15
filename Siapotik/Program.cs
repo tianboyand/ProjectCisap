@@ -16,7 +16,7 @@ namespace Siapotik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUtama());
+            Application.Run(new frmLogin());
         }
     }
 }

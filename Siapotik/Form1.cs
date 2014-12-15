@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 
 namespace Siapotik
 {
     public partial class frmUtama : Form
     {
-        SqlConnection conn;
 
         public frmUtama()
         {
@@ -32,28 +31,6 @@ namespace Siapotik
             this.Close();
         }
 
-        private void signin_Click(object sender, EventArgs e)
-        {
-        
-        string pesan;
-        try {
-            pesan = String.Concat("Koneksi ke = ",
-            conn.DataSource, "\n");
-                pesan = String.Concat(pesan, "Database = ",
-            conn.Database, "\n");
-            pesan = String.Concat(pesan, "WorkStationID = ",
-            conn.WorkstationId, "\n");
-            pesan = String.Concat(pesan, "Connection String = ",
-            conn.ConnectionString);
-            MessageBox.Show(pesan, "Koneksi Database");
-            }
-            catch (SqlException ex) {
-            pesan = String.Concat("Error ", ex.ErrorCode, " : ");
-            pesan = String.Concat(pesan, ex.Message);
-            MessageBox.Show(pesan, "Database Error");
-            }
-        }
-
         private void jabatanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmJabatan Jabatan = new frmJabatan();
@@ -70,46 +47,115 @@ namespace Siapotik
 
         private void frmUtama_Load(object sender, EventArgs e)
         {
-            classKoneksi konek = new classKoneksi();
-            konek.koneksi();
-            
+            frmLogin login = new frmLogin();
         }
 
-        private void pnPegawai_Click(object sender, EventArgs e)
+        private void menusSupplier_Click(object sender, EventArgs e)
         {
-            frmPegawai pegawai = new frmPegawai();
-            pegawai.Show();
-            pegawai.MdiParent = this;
-            pnPegawai.Show();
+            frmSupplier supplier = new frmSupplier();
+            supplier.MdiParent = this;
+            supplier.Show();
         }
 
-        private void pnJabatan_Click(object sender, EventArgs e)
+        private void menuJualResep_Click(object sender, EventArgs e)
         {
-            frmJabatan jabatan = new frmJabatan();
-            jabatan.Show();
-            jabatan.MdiParent = this;
-            pnJabatan.Show();
+            frmPenjualan jual = new frmPenjualan();
+            jual.MdiParent = this;
+            jual.Show();
         }
 
-        private void pnGolongan_Click(object sender, EventArgs e)
+        private void resepToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGolObat golobat = new frmGolObat();
-            golobat.MdiParent = this;
-            golobat.Show();
-            pnGolongan.Show();
-            pnObat.Show();
+            frmOrderResep resep = new frmOrderResep();
+            resep.MdiParent = this;
+            resep.Show();
         }
 
-        private void pnObat_Click(object sender, EventArgs e)
+        private void dokterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmObat obat = new frmObat();
-            obat.MdiParent = this;
-            obat.Show();
-            pnGolongan.SendToBack();
-            pnObat.SendToBack();
-            pnJabatan.SendToBack();
-            pnPegawai.SendToBack();
+            frmDokter dokter = new frmDokter();
+            dokter.MdiParent = this;
+            dokter.Show();
         }
 
+        private void pasienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPasien pasien = new frmPasien();
+            pasien.MdiParent = this;
+            pasien.Show();
+        }
+
+        public void disData()
+        {
+            dataToolStripMenuItem.Enabled = false;
+        }
+        public void disDistribusi()
+        {
+            prosesToolStripMenuItem.Enabled = false;
+        }
+
+        public void disPenjualan()
+        {
+            penjualanToolStripMenuItem.Enabled = false;
+        }
+
+        public void disPegawai()
+        {
+            pegawaiToolStripMenuItem1.Enabled = false;
+        }
+
+        public void disView()
+        {
+            vIewToolStripMenuItem.Enabled = false;
+        }
+
+        private void penerimaanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPembelian beli = new frmPembelian();
+            beli.MdiParent = this;
+            beli.Show();
+        }
+
+        private void pemesananToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrder order = new frmOrder();
+            order.MdiParent = this;
+            order.Show();
+        }
+
+        private void golonganObatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGolObat golObat = new frmGolObat();
+            golObat.MdiParent = this;
+            golObat.Show();
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Close();
+        }
+
+        private void dataOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewOrder order = new viewOrder();
+            order.MdiParent = this;
+            order.Show();
+        }
+
+        private void dataPenerimaanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewPenerimaan terima = new viewPenerimaan();
+            terima.MdiParent = this;
+            terima.Show();
+        }
+
+        private void dataPenjualanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewPenjualan jual = new viewPenjualan();
+            jual.MdiParent = this;
+            jual.Show();
+        }
     }
 }

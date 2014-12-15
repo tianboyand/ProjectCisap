@@ -36,8 +36,15 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,12 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cetak-non-resep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cetak-non-resep.Designer.cs">
+      <DependentUpon>cetak-non-resep.cs</DependentUpon>
+    </Compile>
     <Compile Include="classKoneksi.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDokter.Designer.cs">
+      <DependentUpon>frmDokter.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGolObat.cs">
       <SubType>Form</SubType>
@@ -79,17 +98,47 @@
     <Compile Include="frmObat.Designer.cs">
       <DependentUpon>frmObat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPegawai.cs">
+    <Compile Include="frmObats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPegawai.Designer.cs">
-      <DependentUpon>frmPegawai.cs</DependentUpon>
+    <Compile Include="frmObats.Designer.cs">
+      <DependentUpon>frmObats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderResep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderResep.Designer.cs">
+      <DependentUpon>frmOrderResep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasien.Designer.cs">
+      <DependentUpon>frmPasien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPembelian.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPembelian.Designer.cs">
       <DependentUpon>frmPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPegawai.Designer.cs">
+      <DependentUpon>frmPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPembelianx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPembelianx.Designer.cs">
+      <DependentUpon>frmPembelianx.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPenjualan.cs">
       <SubType>Form</SubType>
@@ -105,8 +154,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportPembeli.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportPembeli.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Penjualan.Designer.cs">
+      <DependentUpon>View Penjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewObat.Designer.cs">
+      <DependentUpon>viewObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPenerimaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPenerimaan.Designer.cs">
+      <DependentUpon>viewPenerimaan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cetak-non-resep.resx">
+      <DependentUpon>cetak-non-resep.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDokter.resx">
+      <DependentUpon>frmDokter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGolObat.resx">
       <DependentUpon>frmGolObat.cs</DependentUpon>
@@ -120,11 +199,26 @@
     <EmbeddedResource Include="frmObat.resx">
       <DependentUpon>frmObat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPegawai.resx">
-      <DependentUpon>frmPegawai.cs</DependentUpon>
+    <EmbeddedResource Include="frmObats.resx">
+      <DependentUpon>frmObats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderResep.resx">
+      <DependentUpon>frmOrderResep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasien.resx">
+      <DependentUpon>frmPasien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPembelian.resx">
       <DependentUpon>frmPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPegawai.resx">
+      <DependentUpon>frmPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPembelianx.resx">
+      <DependentUpon>frmPembelianx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPenjualan.resx">
       <DependentUpon>frmPenjualan.cs</DependentUpon>
@@ -142,6 +236,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportPembeli.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportPembeli.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Penjualan.resx">
+      <DependentUpon>View Penjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewObat.resx">
+      <DependentUpon>viewObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPenerimaan.resx">
+      <DependentUpon>viewPenerimaan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Power - Switch User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

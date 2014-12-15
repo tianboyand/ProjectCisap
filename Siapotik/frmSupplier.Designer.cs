@@ -28,157 +28,165 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dgvSupplier = new System.Windows.Forms.DataGridView();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.txtNama = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtAlamat = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHP = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // dgvSupplier
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(28, 160);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 63);
-            this.groupBox1.TabIndex = 56;
-            this.groupBox1.TabStop = false;
+            this.dgvSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSupplier.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvSupplier.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupplier.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvSupplier.Location = new System.Drawing.Point(30, 223);
+            this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.Size = new System.Drawing.Size(400, 196);
+            this.dgvSupplier.TabIndex = 63;
+            this.dgvSupplier.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellEnter);
             // 
-            // button2
+            // btnHapus
             // 
-            this.button2.Location = new System.Drawing.Point(129, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 29);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnHapus.Location = new System.Drawing.Point(156, 165);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(71, 29);
+            this.btnHapus.TabIndex = 62;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = true;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
-            // button3
+            // btnEdit
             // 
-            this.button3.Location = new System.Drawing.Point(244, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 29);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(254, 165);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(71, 29);
+            this.btnEdit.TabIndex = 61;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button4
+            // btnTambah
             // 
-            this.button4.Location = new System.Drawing.Point(11, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(71, 29);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Tambah";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnTambah.Location = new System.Drawing.Point(351, 165);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(71, 29);
+            this.btnTambah.TabIndex = 60;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = true;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
-            // textBox4
+            // txtNama
             // 
-            this.textBox4.Location = new System.Drawing.Point(164, 123);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 20);
-            this.textBox4.TabIndex = 55;
+            this.txtNama.Enabled = false;
+            this.txtNama.Location = new System.Drawing.Point(156, 77);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(274, 20);
+            this.txtNama.TabIndex = 59;
             // 
-            // textBox3
+            // txtID
             // 
-            this.textBox3.Location = new System.Drawing.Point(164, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 20);
-            this.textBox3.TabIndex = 54;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(164, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 20);
-            this.textBox2.TabIndex = 52;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(164, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 51;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 19);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "No. Telp/HP";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 19);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Alamat";
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(156, 24);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(126, 20);
+            this.txtID.TabIndex = 58;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 71);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(26, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 19);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Nama";
+            this.label2.Size = new System.Drawing.Size(110, 19);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Nama Supplier";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 20);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(26, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 19);
-            this.label1.TabIndex = 46;
+            this.label1.TabIndex = 56;
             this.label1.Text = "ID Supplier";
             // 
-            // dataGridView1
+            // txtAlamat
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 248);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(497, 191);
-            this.dataGridView1.TabIndex = 57;
+            this.txtAlamat.Enabled = false;
+            this.txtAlamat.Location = new System.Drawing.Point(156, 102);
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.Size = new System.Drawing.Size(274, 20);
+            this.txtAlamat.TabIndex = 65;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(26, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 19);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Alamat";
+            // 
+            // txtHP
+            // 
+            this.txtHP.Enabled = false;
+            this.txtHP.Location = new System.Drawing.Point(156, 128);
+            this.txtHP.Name = "txtHP";
+            this.txtHP.Size = new System.Drawing.Size(274, 20);
+            this.txtHP.TabIndex = 67;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(26, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 19);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "No. Telp/HP";
             // 
             // frmSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 460);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
+            this.BackColor = System.Drawing.Color.DarkMagenta;
+            this.ClientSize = new System.Drawing.Size(461, 460);
+            this.Controls.Add(this.txtHP);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtAlamat);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dgvSupplier);
+            this.Controls.Add(this.btnHapus);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnTambah);
+            this.Controls.Add(this.txtNama);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmSupplier";
             this.Text = "Data Supplier";
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmSupplier_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,18 +194,18 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvSupplier;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.TextBox txtNama;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtAlamat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtHP;
+        private System.Windows.Forms.Label label4;
+
     }
 }

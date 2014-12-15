@@ -21,6 +21,74 @@ namespace Siapotik
         {
             InitializeComponent();
         }
+
+        private void frmPegawai_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.BringToFront();
+            bersihtxt();
+            distxt();
+            //classKoneksi konek = new classKoneksi();
+            //konek.koneksi();
+            conn = new SqlConnection("Server=localhost; Data Source=TRIE; Database=siapotik; Integrated Security=SSPI");
+            //conn.Open();
+            tampilData();
+            txtAkses.Items.Add("Full");
+            txtAkses.Items.Add("Half");
+            txtAkses.Items.Add("Low");
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            if (btnTambah.Text == "Tambah")
+            {
+                aktif();
+                bersihtxt();
+                btnBatal.Enabled = true;
+                btnEdit.Enabled = false;
+                btnHapus.Enabled = false;
+                cekjabatan();
+                autonumber();
+                btnTambah.Text = "Simpan";
+                txtFoto.Text = "";
+                pBox.ImageLocation = "";
+            }
+            else
+            {
+                try
+                {
+                    conn.Open();
+                    string sql, pesan;
+                    sql = String.Concat("Insert Into T_Pegawai Values ('",
+                    txtID.Text, "', '", txtNama.Text, "', '", txtKelamin.Text, "', '", txtAlamat.Text, "', '", txtHP.Text, "', '", txtPassword.Text, "', '", txtFoto.Text, "','", txtJabatan.Text, "','", txtAkses.Text, "')");
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql;
+                    DialogResult result = MessageBox.Show("Yakin Simpan Data Ini ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        pesan = String.Concat(cmd.ExecuteNonQuery(), " Data Berhasil Disimpan");
+                        MessageBox.Show(pesan, "Success");
+                    }
+                    else
+                    {
+                        distxt();
+                    }
+                    conn.Close();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Terjadi kesalahan karena: " + err);
+                }
+                tampilData();
+                btnTambah.Text = "Tambah";
+                btnBatal.Enabled = false;
+                btnEdit.Enabled = true;
+                btnHapus.Enabled = true;
+            }
+        }
+
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             string pesan;
@@ -30,6 +98,8 @@ namespace Siapotik
                 aktif();
                 btnEdit.Text = "Update";
                 btnBatal.Enabled = true;
+                btnTambah.Enabled = false;
+                btnHapus.Enabled = false;
                 conn.Close();
                 cekjabatan();
             }
@@ -62,6 +132,8 @@ namespace Siapotik
                 tampilData();
                 btnEdit.Text = "Edit";
                 btnBatal.Enabled=false;
+                btnTambah.Enabled = true;
+                btnHapus.Enabled = true;
             }
         }
 
@@ -69,20 +141,6 @@ namespace Siapotik
         {
             frmJabatan Jabatan = new frmJabatan();
             Jabatan.Show();
-        }
-
-        private void frmPegawai_Load(object sender, EventArgs e)
-        {
-            bersihtxt();
-            distxt();
-            //classKoneksi konek = new classKoneksi();
-            //konek.koneksi();
-            conn = new SqlConnection("Server=localhost; Data Source=TRIE; Database=siapotik; Integrated Security=SSPI");
-            //conn.Open();
-            tampilData();
-            txtAkses.Items.Add("Full");
-            txtAkses.Items.Add("Half");
-            txtAkses.Items.Add("Low");
         }
 
         private void cekjabatan()
@@ -109,6 +167,7 @@ namespace Siapotik
             txtJabatan.Text = "";
             txtJabatan2.Text = "";
             txtPassword.Text = "";
+            txtAkses.Text = "";
         }
 
         private void tampilData()
@@ -187,44 +246,6 @@ namespace Siapotik
             conn.Close();
         }
 
-        private void btnTambah_Click(object sender, EventArgs e)
-        { 
-            if (btnTambah.Text == "Tambah")
-            {
-                aktif();
-                bersihtxt();
-                btnBatal.Enabled = true;
-                btnEdit.Enabled = false;
-                btnHapus.Enabled = false;
-                cekjabatan();
-                autonumber();
-                btnTambah.Text = "Simpan";
-                txtFoto.Text = "";
-                pBox.ImageLocation = "";
-            }
-            else
-            {
-            conn.Open();
-                string sql, pesan;
-                sql = String.Concat("Insert Into T_Pegawai Values ('",
-                txtID.Text, "', '", txtNama.Text, "', '", txtKelamin.Text, "', '", txtAlamat.Text, "', '", txtHP.Text, "', '", txtPassword.Text, "', '", txtFoto.Text, "','", txtJabatan.Text, "','", txtAkses.Text, "')");
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = sql;
-                pesan = String.Concat(cmd.ExecuteNonQuery(), " Record berhasil di Simpan");
-                MessageBox.Show(pesan, "Info Simpan");
-                conn.Close();
-                tampilData();
-                bersihtxt();
-                distxt();
-                btnTambah.Text = "Tambah";
-                btnBatal.Enabled = false;
-                btnEdit.Enabled = true;
-                btnHapus.Enabled = true;
-            conn.Close();
-            }
-        }
-
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             conn.Close();
@@ -273,6 +294,7 @@ namespace Siapotik
             distxt();
             btnTambah.Text = "Tambah";
             btnBatal.Enabled = false;
+            btnTambah.Enabled = true;
             btnEdit.Enabled = true;
             btnHapus.Enabled = true;
         }
@@ -280,8 +302,6 @@ namespace Siapotik
         private void dgvPegawai_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             distxt();
-            btnTambah.Text = "Tambah";
-            btnEdit.Text = "Edit";
             txtID.Text = dgvPegawai.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtNama.Text = dgvPegawai.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtKelamin.Text = dgvPegawai.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -291,6 +311,10 @@ namespace Siapotik
             txtPassword.Text = dgvPegawai.Rows[e.RowIndex].Cells[6].Value.ToString();
             txtAkses.Text = dgvPegawai.Rows[e.RowIndex].Cells[7].Value.ToString();
             tampilFoto();
+            btnTambah.Text = "Tambah";
+            btnEdit.Text = "Edit";
+            btnEdit.Enabled = true;
+            btnHapus.Enabled = true;
             conn.Open();
             string sql = "Select Kode_Jabatan from T_Jabatan where Jabatan = '" + txtJabatan2.Text + "'";
             SqlCommand cmd = new SqlCommand(sql, conn);

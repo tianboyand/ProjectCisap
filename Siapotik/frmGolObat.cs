@@ -40,31 +40,39 @@ namespace Siapotik
             }
             else
             {
-                try
+                if (txtGolongan.Text == "")
                 {
-                    conn.Open();
-                    string sql, pesan;
-                    sql = String.Concat("Insert Into T_Golongan_Obat Values ('", kdGolongan.Text, "', '", txtGolongan.Text, "')");
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = conn;
-                    cmd.CommandText = sql;
-                    DialogResult result = MessageBox.Show("Simpan Data Ini ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
+                    MessageBox.Show("Data Belum Lengkap!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtGolongan.Focus();
+                }
+                else
+                {
+                    try
                     {
-                        pesan = String.Concat(cmd.ExecuteNonQuery(), " Data Berhasil Disimpan");
-                        MessageBox.Show(pesan, "Success");
+                        conn.Open();
+                        string sql, pesan;
+                        sql = String.Concat("Insert Into T_Golongan_Obat Values ('", kdGolongan.Text, "', '", txtGolongan.Text, "')");
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = conn;
+                        cmd.CommandText = sql;
+                        DialogResult result = MessageBox.Show("Simpan Data Ini ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            pesan = String.Concat(cmd.ExecuteNonQuery(), " Data Berhasil Disimpan");
+                            MessageBox.Show(pesan, "Success");
+                        }
                     }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Terjadi kesalahan karena: " + err);
+                    }
+                    conn.Close();
+                    bersihTxt();
+                    tampilData();
+                    btnTambah.Text = "Tambah";
+                    btnHapus.Enabled = true;
+                    btnEdit.Enabled = true;
                 }
-                catch (Exception err)
-                {
-                    MessageBox.Show("Terjadi kesalahan karena: " + err);
-                }
-                conn.Close();
-                bersihTxt();
-                tampilData();
-                btnTambah.Text = "Tambah";
-                btnHapus.Enabled = true;
-                btnEdit.Enabled = true;
             }
         }
 
@@ -80,31 +88,39 @@ namespace Siapotik
             }
             else
             {
-                try
+                if (txtGolongan.Text == "")
                 {
-                    conn.Open();
-                    string sql = "UPDATE T_Golongan_Obat SET Golongan='" + txtGolongan.Text + "' WHERE Kode_Golongan='" + kdGolongan.Text + "'";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = conn;
-                    cmd.CommandText = sql;
-                    DialogResult result = MessageBox.Show("Yakin Ubah Data Ini ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
+                    MessageBox.Show("Data Belum Lengkap!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtGolongan.Focus();
+                }
+                else
+                {
+                    try
                     {
-                        pesan = String.Concat(cmd.ExecuteNonQuery(), " Data Berhasil Diupdate");
-                        MessageBox.Show(pesan, "Success");
-                    }
+                        conn.Open();
+                        string sql = "UPDATE T_Golongan_Obat SET Golongan='" + txtGolongan.Text + "' WHERE Kode_Golongan='" + kdGolongan.Text + "'";
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = conn;
+                        cmd.CommandText = sql;
+                        DialogResult result = MessageBox.Show("Yakin Ubah Data Ini ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            pesan = String.Concat(cmd.ExecuteNonQuery(), " Data Berhasil Diupdate");
+                            MessageBox.Show(pesan, "Success");
+                        }
 
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Terjadi kesalahan karena: " + err);
+                    }
+                    conn.Close();
+                    bersihTxt();
+                    tampilData();
+                    btnEdit.Text = "Edit";
+                    btnHapus.Enabled = true;
+                    btnTambah.Enabled = true;
                 }
-                catch (Exception err)
-                {
-                    MessageBox.Show("Terjadi kesalahan karena: " + err);
-                }
-                conn.Close();
-                bersihTxt();
-                tampilData();
-                btnEdit.Text = "Edit";
-                btnHapus.Enabled = true;
-                btnTambah.Enabled = true;
             }
         }
 

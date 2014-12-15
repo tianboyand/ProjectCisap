@@ -103,6 +103,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(22, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 19);
@@ -113,6 +114,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(22, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 19);
@@ -123,6 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(319, 384);
             this.Controls.Add(this.dgvGolongan);
             this.Controls.Add(this.btnHapus);
@@ -132,6 +135,8 @@
             this.Controls.Add(this.kdGolongan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmGolObat";
             this.Text = "Golongan Obat";
             this.Load += new System.EventHandler(this.frmGolObat_Load);
